@@ -1,35 +1,38 @@
+import LinkedButtonWithIcon from "./LinkedButtonWithIcon";
 import { MdOutlineHome } from "react-icons/md";
-import { CiClock2 } from "react-icons/ci";
+import { IoMdTime } from "react-icons/io";
 import { ImStatsDots } from "react-icons/im";
 import Link from "next/link";
 
 const Navbar = () => {
   return (
     <div className="navbar flex justify-between bg-white shadow-sm px-16">
-      <div className="">
+      <div>
         <Link href="/" className="btn btn-ghost text-xl font-normal flex gap-0">
           <span className="font-bold">Keen</span>Keeper
         </Link>
       </div>
+
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1 font-bold">
           <li>
-            <Link href="/" className="flex gap-1 items-center">
-              <MdOutlineHome />
-              Home
-            </Link>
+            <LinkedButtonWithIcon icon={MdOutlineHome} label="Home" href="/" />
           </li>
+
           <li>
-            <Link href="/timeline" className="flex gap-1 items-center">
-              <CiClock2 />
-              Timeline
-            </Link>
+            <LinkedButtonWithIcon
+              icon={IoMdTime}
+              label="Timeline"
+              href="/timeline"
+            />
           </li>
+
           <li>
-            <Link href="/stats" className="flex gap-1 items-center">
-              <ImStatsDots />
-              Stats
-            </Link>
+            <LinkedButtonWithIcon
+              icon={ImStatsDots}
+              label="Stats"
+              href="/stats"
+            />
           </li>
         </ul>
       </div>
