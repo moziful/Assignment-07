@@ -1,34 +1,35 @@
 import { MdOutlineHome } from "react-icons/md";
 import { CiClock2 } from "react-icons/ci";
 import { ImStatsDots } from "react-icons/im";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="navbar flex justify-between bg-base-100 shadow-sm px-16">
+    <div className="navbar flex justify-between bg-white shadow-sm px-16">
       <div className="">
-        <a className="btn btn-ghost text-xl font-normal flex gap-0">
+        <Link href="/" className="btn btn-ghost text-xl font-normal flex gap-0">
           <span className="font-bold">Keen</span>Keeper
-        </a>
+        </Link>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1 font-bold">
           <li>
-            <a>
+            <Link href="/" className="flex gap-1 items-center">
               <MdOutlineHome />
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a>
+            <Link href="/timeline" className="flex gap-1 items-center">
               <CiClock2 />
               Timeline
-            </a>
+            </Link>
           </li>
           <li>
-            <a>
+            <Link href="/stats" className="flex gap-1 items-center">
               <ImStatsDots />
               Stats
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
