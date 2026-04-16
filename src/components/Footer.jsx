@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { MdOutlineHome } from "react-icons/md";
-import { IoMdTime } from "react-icons/io";
-import { ImStatsDots } from "react-icons/im";
+import { RiInstagramFill } from "react-icons/ri";
+import { IoLogoFacebook } from "react-icons/io";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -18,22 +18,22 @@ const Footer = () => {
         </p>
         <div className="flex flex-col gap-4">
           <p className="text-xl font-medium">Social Links</p>
-          <div className="grid grid-cols-3 gap-3 text-black font-medium">
-            <div className="w-fit p-4 bg-white rounded-full">
-              <Link href="/">
-                <ImStatsDots />
-              </Link>
-            </div>
-            <div className="w-fit p-4 bg-white rounded-full">
-              <Link href="/">
-                <ImStatsDots />
-              </Link>
-            </div>
-            <div className="w-fit p-4 bg-white rounded-full">
-              <Link href="/">
-                <ImStatsDots />
-              </Link>
-            </div>
+          <div className="grid grid-cols-3 gap-3 text-black text-3xl font-medium">
+            <Link href="/">
+              <div className="w-fit p-2 bg-white rounded-full">
+                <RiInstagramFill />
+              </div>
+            </Link>
+            <Link href="/">
+              <div className="w-fit p-2 bg-white rounded-full">
+                <IoLogoFacebook />
+              </div>
+            </Link>
+            <Link href="/">
+              <div className="w-fit p-2 bg-white rounded-full">
+                <FaSquareXTwitter />
+              </div>
+            </Link>
           </div>
         </div>
         <hr className="w-full my-8 border-t border-gray-700" />
