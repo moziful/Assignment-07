@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       <body className="flex flex-col gap-10 bg-[#F8FAFC]">
         <Navbar />
         <main className="mx-60 flex flex-col gap-10">{children}</main>
+        <Footer />
       </body>
     </html>
   );

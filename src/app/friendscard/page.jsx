@@ -1,7 +1,7 @@
 const FriendCard = () => {
   return (
     <div className="p-6 flex flex-col gap-2 justify-center items-center rounded-xl shadow">
-      <div className="w-20 h-20 flex justify-center items-center rounded-full">
+      <div className="w-20 h-20 flex justify-center items-center rounded-full border-2">
         A
       </div>
       <div className="flex flex-col gap-2">
