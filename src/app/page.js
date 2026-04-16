@@ -1,6 +1,6 @@
 import Banner from "./banner/page";
 import StatsCard from "./statscard/page";
-import FriendCard from "./friendscard/page";
+import FriendCard from "@/components/FriendCard";
 import friends from "../data/friends.json";
 
 export default function Home() {
@@ -22,10 +22,7 @@ export default function Home() {
         <StatsCard count={totalFriends} name="Total Friends" />
         <StatsCard count={onTrackCount} name="On Track" />
         <StatsCard count={needAttentionCount} name="Need Attention" />
-        <StatsCard
-          count={interactionsThisMonthCount}
-          name="Interactions This Month"
-        />
+        <StatsCard count={interactionsThisMonthCount} name="Interactions This Month" />
       </div>
       <hr className="border-t border-gray-300" />
       <div className="flex flex-col gap-4">
