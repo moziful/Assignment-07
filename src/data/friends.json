@@ -6,7 +6,7 @@
     "email": "nabil.hasan@example.com",
     "days_since_contact": 6,
     "status": "on-track",
-    "tags": ["office", "gym buddy"],
+    "tags": ["office", "gym"],
     "bio": "Former coworker who now trains with me in the evenings. Great person for accountability and career advice.",
     "goal": 10,
     "next_due_date": "2026-04-20"
@@ -18,7 +18,7 @@
     "email": "aisha.rahman@example.com",
     "days_since_contact": 18,
     "status": "overdue",
-    "tags": ["university", "close friend"],
+    "tags": ["work", "friend"],
     "bio": "Met during software engineering classes. We still share coding resources and catch up over coffee whenever possible.",
     "goal": 14,
     "next_due_date": "2026-04-12"
@@ -30,7 +30,7 @@
     "email": "sarah.ahmed@example.com",
     "days_since_contact": 13,
     "status": "almost due",
-    "tags": ["school", "study partner"],
+    "tags": ["school", "school"],
     "bio": "We prepared for board exams together. She now works in design and always gives thoughtful creative feedback.",
     "goal": 15,
     "next_due_date": "2026-04-18"
@@ -54,7 +54,7 @@
     "email": "maya.sultana@example.com",
     "days_since_contact": 2,
     "status": "on-track",
-    "tags": ["book club", "creative"],
+    "tags": ["club", "creative"],
     "bio": "Monthly book club friend who loves historical fiction and always recommends excellent reads.",
     "goal": 12,
     "next_due_date": "2026-04-26"
@@ -78,7 +78,7 @@
     "email": "farzana.noor@example.com",
     "days_since_contact": 20,
     "status": "overdue",
-    "tags": ["family friend", "travel"],
+    "tags": ["family", "travel"],
     "bio": "Family friend who moved abroad. We love sharing travel stories and photos from different cities.",
     "goal": 14,
     "next_due_date": "2026-04-10"
@@ -90,7 +90,7 @@
     "email": "imran.hossain@example.com",
     "days_since_contact": 4,
     "status": "on-track",
-    "tags": ["gaming", "weekend hangout"],
+    "tags": ["gaming", "school"],
     "bio": "Met through online gaming, then became a real-life weekend hangout friend. We usually play co-op games and discuss gadgets.",
     "goal": 7,
     "next_due_date": "2026-04-19"
@@ -102,7 +102,7 @@
     "email": "nusrat.jahan@example.com",
     "days_since_contact": 11,
     "status": "almost due",
-    "tags": ["startup", "mentor friend"],
+    "tags": ["startup", "mentor"],
     "bio": "We met at a startup networking event. She gives practical advice on product ideas, growth, and career direction.",
     "goal": 12,
     "next_due_date": "2026-04-17"
@@ -114,7 +114,7 @@
     "email": "siam.mahmud@example.com",
     "days_since_contact": 25,
     "status": "overdue",
-    "tags": ["photography", "travel buddy"],
+    "tags": ["photography", "travel"],
     "bio": "A travel and street photography friend who often plans short photo walks and weekend trips around Bangladesh.",
     "goal": 14,
     "next_due_date": "2026-04-09"

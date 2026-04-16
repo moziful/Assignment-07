@@ -18,11 +18,11 @@ const FriendCard = ({ friend }) => {
           {friend.days_since_contact}d ago
         </p>
       </div>
-      <div className="flex flex-wrap justify-center gap-1">
+      <div className="flex flex-wrap text-xs justify-center gap-1">
         {friend.tags.map((tag) => (
           <span
             key={tag}
-            className="text-xs font-medium badge rounded-full bg-green-200"
+            className="text-xs font-medium badge uppercase rounded-full bg-green-200"
           >
             {tag}
           </span>
