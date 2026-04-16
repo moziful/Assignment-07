@@ -4,7 +4,7 @@ import FriendCard from "./friendscard/page"
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-10 border-2 border-red-500 rounded-xl shadow">
+    <div className="flex flex-col gap-10 rounded-xl">
       <Banner />
       <div className="grid grid-cols-4 gap-6">
         <StatsCard />
