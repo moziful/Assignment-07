@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "friendId": 3,
+    "friendName": "Sarah Ahmed",
+    "type": "call",
+    "date": "2026-04-15"
+  },
+  {
+    "id": 2,
+    "friendId": 2,
+    "friendName": "Aisha Rahman",
+    "type": "text",
+    "date": "2026-04-14"
+  },
+  {
+    "id": 3,
+    "friendId": 10,
+    "friendName": "Siam Mahmud",
+    "type": "video",
+    "date": "2026-04-13"
+  },
+  {
+    "id": 4,
+    "friendId": 1,
+    "friendName": "Nabil Hasan",
+    "type": "call",
+    "date": "2026-04-12"
+  },
+  {
+    "id": 5,
+    "friendId": 6,
+    "friendName": "Rafiul Karim",
+    "type": "text",
+    "date": "2026-04-11"
+  },
+  {
+    "id": 6,
+    "friendId": 8,
+    "friendName": "Imran Hossain",
+    "type": "video",
+    "date": "2026-04-10"
+  },
+  {
+    "id": 7,
+    "friendId": 5,
+    "friendName": "Maya Sultana",
+    "type": "call",
+    "date": "2026-04-09"
+  },
+  {
+    "id": 8,
+    "friendId": 9,
+    "friendName": "Nusrat Jahan",
+    "type": "text",
+    "date": "2026-04-08"
+  },
+  {
+    "id": 9,
+    "friendId": 4,
+    "friendName": "Tanvir Chowdhury",
+    "type": "call",
+    "date": "2026-04-06"
+  },
+  {
+    "id": 10,
+    "friendId": 7,
+    "friendName": "Farzana Noor",
+    "type": "video",
+    "date": "2026-04-05"
+  }
+]
