@@ -19,17 +19,29 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
           <p className="text-xl font-medium">Social Links</p>
           <div className="grid grid-cols-3 gap-3 text-black text-3xl font-medium">
-            <Link className="rounded-full overflow-hidden" href="/">
+            <Link
+              className="rounded-full overflow-hidden"
+              href="https://www.instagram.com/"
+              target="_blank"
+            >
               <div className="w-fit p-2 bg-white ">
                 <RiInstagramFill />
               </div>
             </Link>
-            <Link className="rounded-full overflow-hidden" href="/">
+            <Link
+              className="rounded-full overflow-hidden"
+              href="https://www.facebook.com/"
+              target="_blank"
+            >
               <div className="w-fit p-2 bg-white">
                 <IoLogoFacebook />
               </div>
             </Link>
-            <Link className="rounded-full overflow-hidden" href="/">
+            <Link
+              className="rounded-full overflow-hidden"
+              href="https://twitter.com/"
+              target="_blank"
+            >
               <div className="w-fit p-2 bg-white">
                 <FaSquareXTwitter />
               </div>

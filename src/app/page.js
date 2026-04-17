@@ -12,7 +12,7 @@ export default function Home() {
     (friend) => friend.status === "overdue"
   ).length;
   const interactionsThisMonthCount = friends.filter(
-    (friend) => friend.days_since_contact <= 30
+    (friend) => friend.daysSinceContact <= 30
   ).length;
 
   return (
