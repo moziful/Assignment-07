@@ -18,7 +18,7 @@ const LinkedButtonWithIcon = ({
       } ${color || ""} ${textColor || ""} ${className || ""}`}
     >
       {Icon && <Icon />}
-      {label}
+      <span className="hidden sm:block">{label}</span>
     </Link>
   );
 };
