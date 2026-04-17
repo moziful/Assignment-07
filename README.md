@@ -4,11 +4,11 @@ KeenKeeper is a friendship tracker web app where users can keep track of their f
 
 ## Live Link
 
-live site
+https://assignment-07-zeta.vercel.app/
 
 ## Repository Link
 
-Repository link
+https://github.com/moziful/Assignment-07
 
 ## Technologies Used
 
