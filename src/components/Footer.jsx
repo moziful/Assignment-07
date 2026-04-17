@@ -5,7 +5,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="mx-auto w-full footer footer-horizontal footer-center bg-green-950 text-primary-content p-10 mx-8 sm:px-60">
+    <footer className="mx-auto w-full footer footer-horizontal footer-center bg-green-950 text-primary-content p-10 mp-8 sm:mp-20 lg:px-60">
       <div className="flex flex-col w-full">
         <div>
           <Link href="/" className="text-5xl font-normal flex gap-0">

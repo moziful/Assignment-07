@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-10 rounded-xl">
       <Banner />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatsCard count={totalFriends} name="Total Friends" />
         <StatsCard count={onTrackCount} name="On Track" />
         <StatsCard count={needAttentionCount} name="Need Attention" />
@@ -27,7 +27,7 @@ export default function Home() {
       <hr className="border-t border-gray-300" />
       <div className="flex flex-col gap-4">
         <h3 className="text-2xl font-semibold">Your Friends</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6">
           {friends.map((friend) => (
             <FriendCard key={friend.id} friend={friend} />
           ))}
