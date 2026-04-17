@@ -5,7 +5,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="mx-auto w-full footer footer-horizontal footer-center bg-green-950 text-primary-content p-10 px-60">
+    <footer className="mx-auto w-full footer footer-horizontal footer-center bg-green-950 text-primary-content p-10 mx-8 sm:px-60">
       <div className="flex flex-col w-full">
         <div>
           <Link href="/" className="text-5xl font-normal flex gap-0">
@@ -49,8 +49,8 @@ const Footer = () => {
           </div>
         </div>
         <hr className="w-full my-8 border-t border-gray-700" />
-        <div className="w-full flex justify-between">
-          <p className="flex-1 text-left">
+        <div className="w-full flex flex-col-reverse sm:flex-row justify-between">
+          <p className="sm:flex-1 sm:text-left">
             &copy; 2026 KeenKeeper. All rights reserved.
           </p>
           <div>Privacy Policy Terms of Service Cookies</div>

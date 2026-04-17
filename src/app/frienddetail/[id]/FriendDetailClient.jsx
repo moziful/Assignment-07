@@ -18,7 +18,7 @@ const formatDate = (dateString) => {
 
 const getStatusClasses = (status) => {
   if (status === "on-track") {
-    return "bg-emerald-500 text-white";
+    return "bg-green-500 text-white";
   }
 
   if (status === "overdue") {
@@ -42,11 +42,11 @@ const getStatusLabel = (status) => {
 
 const DetailStatCard = ({ value, label }) => {
   return (
-    <div className="rounded-2xl shadowborder-slate-200 bg-white px-6 py-7 text-center shadow-sm">
+    <div className="rounded-2xl shadow bg-white px-6 py-7 text-center shadow-sm">
       <h2 className="text-3xl font-semibold tracking-tight text-green-950">
         {value}
       </h2>
-      <p className="mt-2 text-lg text-slate-500">{label}</p>
+      <p className="mt-2 text-lg text-gray-500">{label}</p>
     </div>
   );
 };
@@ -101,7 +101,7 @@ const FriendDetailClient = ({ friend }) => {
   return (
     <div className="mx-auto grid w-full max-w-6xl gap-6 lg:grid-cols-[290px_minmax(0,1fr)]">
       <div className="flex flex-col gap-4">
-        <div className="flex-1 grid grid-cols-1 items-center justify-center rounded-2xl bg-white px-8 py-8 text-center shadow">
+        <div className="flex-1 grid grid-cols-1 gap-2 items-center justify-center rounded-2xl bg-white px-8 py-8 text-center shadow">
           <div className="mx-auto h-24 w-24 overflow-hidden rounded-full">
             <Image
               src={friend.picture}
@@ -126,7 +126,7 @@ const FriendDetailClient = ({ friend }) => {
             {friend.tags.map((tag, index) => (
               <span
                 key={`${friend.id}-${tag}-${index}`}
-                className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-800"
+                className="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-800"
               >
                 {tag}
               </span>
@@ -204,7 +204,7 @@ const FriendDetailClient = ({ friend }) => {
             Quick Check-In
           </h2>
 
-          <div className="mt-5 grid gap-4 md:grid-cols-3">
+          <div className="mt-5 grid grid-cols-3 gap-2">
             <QuickActionCard
               icon={IoCallOutline}
               label="Call"

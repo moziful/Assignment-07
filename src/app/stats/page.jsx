@@ -19,10 +19,10 @@ const chartData = interactionConfig.map((item) => ({
 const Stats = () => {
   return (
     <div className="flex flex-col gap-6 pb-8">
-      <h1 className="text-4xl font-bold tracking-tight text-slate-800 md:text-5xl">
+      <h1 className="text-4xl font-bold tracking-tight text-slate-800">
         Friendship Analytics
       </h1>
-      <div className="rounded-2xl bg-white px-6 py-7 shadow-sm md:px-8 md:py-8">
+      <div className="rounded-2xl bg-white px-6 py-7 shadow-sm">
         <p className="text-lg font-semibold text-green-950">
           By Interaction Type
         </p>

@@ -11,7 +11,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="navbar flex justify-between bg-white shadow-sm px-16">
+    <div className="navbar flex justify-between bg-white shadow-sm px-4 sm:px-16">
       <div>
         <Link href="/" className="btn btn-ghost text-xl font-normal flex gap-0">
           <span className="font-bold">Keen</span>

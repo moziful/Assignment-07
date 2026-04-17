@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       <body className="flex flex-col gap-10 bg-[#F8FAFC]">
         <ToastProvider>
           <Navbar />
-          <main className="mx-60 flex flex-col gap-10">{children}</main>
+          <main className="mx-8 sm:mx-60 flex flex-col gap-10">{children}</main>
           <Footer />
         </ToastProvider>
       </body>
