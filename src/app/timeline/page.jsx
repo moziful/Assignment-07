@@ -1,10 +1,20 @@
 "use client";
 
-import { useState } from "react";
-import { FaRegMessage, FaVideo } from "react-icons/fa6";
-import { IoCallOutline } from "react-icons/io5";
+import { useEffect, useState } from "react";
+import { FaRegMessage } from "react-icons/fa6";
+import {
+  IoCallOutline,
+  IoClose,
+  IoSearchOutline,
+  IoVideocamOutline,
+} from "react-icons/io5";
 
-import interactions from "@/data/interactions.json";
+import {
+  formatInteractionLabel,
+  getAllInteractions,
+  INTERACTIONS_UPDATED_EVENT,
+} from "@/lib/interactions";
+import { useToast } from "@/components/ToastProvider";
 
 const formatDate = (dateString) => {
   return new Date(dateString).toLocaleDateString("en-US", {
@@ -23,51 +33,100 @@ const getInteractionIcon = (type) => {
     return FaRegMessage;
   }
 
-  return FaVideo;
+  return IoVideocamOutline;
 };
-
-const getInteractionLabel = (type) => {
-  if (type === "call") {
-    return "Call";
-  }
-
-  if (type === "text") {
-    return "Text";
-  }
-
-  return "Video";
-};
-
-const sortedInteractions = [...interactions].sort(
-  (firstItem, secondItem) =>
-    new Date(secondItem.date).getTime() - new Date(firstItem.date).getTime(),
-);
 
 const Timeline = () => {
+  const { showToast } = useToast();
   const [selectedType, setSelectedType] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [allInteractions, setAllInteractions] = useState([]);
 
-  const filteredInteractions =
-    selectedType === "all"
-      ? sortedInteractions
-      : sortedInteractions.filter(
-          (interaction) => interaction.type === selectedType,
-        );
+  useEffect(() => {
+    const loadInteractions = () => {
+      setAllInteractions(getAllInteractions());
+    };
+
+    loadInteractions();
+    window.addEventListener(INTERACTIONS_UPDATED_EVENT, loadInteractions);
+    window.addEventListener("storage", loadInteractions);
+
+    return () => {
+      window.removeEventListener(INTERACTIONS_UPDATED_EVENT, loadInteractions);
+      window.removeEventListener("storage", loadInteractions);
+    };
+  }, []);
+
+  const normalizedSearchQuery = searchQuery.trim().toLowerCase();
+
+  const filteredInteractions = allInteractions.filter((interaction) => {
+    const matchesType =
+      selectedType === "all" || interaction.type === selectedType;
+
+    if (!matchesType) {
+      return false;
+    }
+
+    if (!normalizedSearchQuery) {
+      return true;
+    }
+
+    const interactionLabel = formatInteractionLabel(interaction.type);
+    const searchableText = [
+      interaction.friendName,
+      interaction.type,
+      interactionLabel,
+      formatDate(interaction.date),
+      `${interactionLabel} with ${interaction.friendName}`,
+      interaction.date,
+    ]
+      .join(" ")
+      .toLowerCase();
+
+    return searchableText.includes(normalizedSearchQuery);
+  });
 
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-6">
       <div className="flex flex-col gap-4">
         <h1 className="text-5xl font-bold text-slate-800">Timeline</h1>
 
-        <select
-          value={selectedType}
-          onChange={(event) => setSelectedType(event.target.value)}
-          className="select w-full max-w-xs rounded-xl border-slate-200 bg-white text-slate-500"
-        >
-          <option value="all">All Catagories</option>
-          <option value="call">Calls</option>
-          <option value="text">Texts</option>
-          <option value="video">Video Calls</option>
-        </select>
+        <div className="flex flex-col gap-3 md:flex-row md:items-center">
+          <select
+            value={selectedType}
+            onChange={(event) => setSelectedType(event.target.value)}
+            className="select w-full rounded-xl border-slate-200 bg-white text-slate-500 md:max-w-xs"
+          >
+            <option value="all">All Catagories</option>
+            <option value="call">Calls</option>
+            <option value="text">Texts</option>
+            <option value="video">Video Calls</option>
+          </select>
+
+          <label className="input flex w-full items-center gap-2 rounded-xl border-slate-200 bg-white focus-within:outline-none">
+            <IoSearchOutline className="text-lg text-slate-400" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(event) => setSearchQuery(event.target.value)}
+              placeholder="Search timeline"
+              className="grow text-slate-700 placeholder:text-slate-400"
+            />
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={() => {
+                  setSearchQuery("");
+                  showToast("Cleared");
+                }}
+                className="flex h-7 w-7 items-center justify-center rounded-full bg-slate-100 text-slate-500 transition hover:bg-slate-200"
+                aria-label="Clear search"
+              >
+                <IoClose className="text-base" />
+              </button>
+            )}
+          </label>
+        </div>
       </div>
 
       <div className="flex flex-col gap-4">
@@ -85,7 +144,7 @@ const Timeline = () => {
 
               <div className="flex flex-col gap-1">
                 <h2 className="text-lg font-medium text-slate-700">
-                  {getInteractionLabel(interaction.type)} with{" "}
+                  {formatInteractionLabel(interaction.type)} with{" "}
                   {interaction.friendName}
                 </h2>
                 <p className="text-sm text-slate-500">
@@ -98,7 +157,7 @@ const Timeline = () => {
 
         {filteredInteractions.length === 0 && (
           <div className="rounded-xl border border-slate-200 bg-white px-5 py-6 text-slate-500 shadow-sm">
-            No timeline entries found for this filter.
+            No timeline entries found!
           </div>
         )}
       </div>

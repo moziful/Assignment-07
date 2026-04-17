@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# KeenKeeper
 
-## Getting Started
+KeenKeeper is a friendship tracker web app where users can keep track of their friends, check relationship status, check interactions, and view friendship analytics in one place.
 
-First, run the development server:
+## Live Link
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+live site
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Repository Link
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Repository link
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies Used
 
-## Learn More
+- Next.js
+- React
+- Tailwind CSS
+- DaisyUI
+- Recharts
+- React Icons
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- View all friends with photo, tags, contact status, last contact
+- Friend details page and quick interactions like Call, Text, and Video
+- Timeline page with filter and search
+- Friendship analytics with a pie chart
+- Custom 404 page and loading ui
+-  Toast notifications
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Pages
 
-## Deploy on Vercel
+- Home Page
+- Timeline Page
+- Stats Page
+- Friend Details Page
+- Custom 404 Page
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## How to Run Locally
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository
+2. Open the project folder
+3. Install dependencies:
+4. Run the development server:
+5. Open the local link in your browser
+
+## Project Purpose
+
+This project was built for assignment to practice routing, component-based UI design, JSON data handling, charts, filters, search, toast messages, and responsive frontend development using Next.js.

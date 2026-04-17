@@ -1,10 +1,11 @@
-import LinkedButtonWithIcon from "@/components/LinkedButtonWithIcon";
-import { FaPlus } from "react-icons/fa";
+"use client";
 
-const primary = "bg-green-950";
-const whiteText = "text-white";
+import { FaPlus } from "react-icons/fa";
+import { useToast } from "@/components/ToastProvider";
 
 const Banner = () => {
+  const { showToast } = useToast();
+
   return (
     <div className="w-full mx-auto flex flex-col justify-center items-center text-center gap-8 rounded-xl">
       <div className="flex flex-col gap-4">
@@ -18,13 +19,14 @@ const Banner = () => {
           relationships that matter most.
         </p>
       </div>
-      <LinkedButtonWithIcon
-        color={primary}
-        textColor={whiteText}
-        icon={FaPlus}
-        label="Add Friend"
-        href=""
-      />
+      <button
+        type="button"
+        onClick={() => showToast("Friend added!")}
+        className="btn w-fit flex gap-1 items-center bg-green-950 text-white hover:bg-green-900"
+      >
+        <FaPlus />
+        Add Friend
+      </button>
     </div>
   );
 };

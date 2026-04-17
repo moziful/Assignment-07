@@ -23,9 +23,9 @@ const FriendCard = ({ friend }) => {
         </p>
       </div>
       <div className="flex flex-wrap text-xs justify-center gap-1">
-        {friend.tags.map((tag) => (
+        {friend.tags.map((tag, index) => (
           <span
-            key={tag}
+            key={`${friend.id}-${tag}-${index}`}
             className="text-xs font-medium badge uppercase rounded-full bg-green-200"
           >
             {tag}
